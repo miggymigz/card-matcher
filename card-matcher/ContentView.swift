@@ -8,9 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    let vm = CardMatcherVM()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            ForEach(0..<vm.rows) { r in
+                HStack {
+                    ForEach(0..<vm.cols) { c in
+                        CardView(content: vm.card(at: r * vm.cols + c).content)
+                    }
+                }
+            }
+        }
+        .padding()
+    }
+}
+
+struct CardView: View {
+    let content: String
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3)
+            Text(content).font(.largeTitle)
+
+        }
+        .foregroundColor(.blue)
     }
 }
 

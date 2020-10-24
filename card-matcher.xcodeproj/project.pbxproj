@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C5B20AC2543FA480016A1F9 /* card_matcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B20AB2543FA480016A1F9 /* card_matcherApp.swift */; };
+		9C5B20AC2543FA480016A1F9 /* CardMatcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B20AB2543FA480016A1F9 /* CardMatcherApp.swift */; };
 		9C5B20AE2543FA480016A1F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B20AD2543FA480016A1F9 /* ContentView.swift */; };
 		9C5B20B02543FA480016A1F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B20AF2543FA480016A1F9 /* Assets.xcassets */; };
 		9C5B20B32543FA480016A1F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B20B22543FA480016A1F9 /* Preview Assets.xcassets */; };
+		9C5B20BC2543FC100016A1F9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B20BB2543FC100016A1F9 /* Model.swift */; };
+		9C5B20C0254401620016A1F9 /* Array+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B20BF254401620016A1F9 /* Array+String.swift */; };
+		9C5B20C4254401F70016A1F9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B20C3254401F70016A1F9 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9C5B20A82543FA480016A1F9 /* card-matcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "card-matcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C5B20AB2543FA480016A1F9 /* card_matcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = card_matcherApp.swift; sourceTree = "<group>"; };
+		9C5B20AB2543FA480016A1F9 /* CardMatcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMatcherApp.swift; sourceTree = "<group>"; };
 		9C5B20AD2543FA480016A1F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9C5B20AF2543FA480016A1F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C5B20B22543FA480016A1F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C5B20B42543FA480016A1F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C5B20BB2543FC100016A1F9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9C5B20BF254401620016A1F9 /* Array+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+String.swift"; sourceTree = "<group>"; };
+		9C5B20C3254401F70016A1F9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +58,14 @@
 		9C5B20AA2543FA480016A1F9 /* card-matcher */ = {
 			isa = PBXGroup;
 			children = (
-				9C5B20AB2543FA480016A1F9 /* card_matcherApp.swift */,
+				9C5B20AB2543FA480016A1F9 /* CardMatcherApp.swift */,
 				9C5B20AD2543FA480016A1F9 /* ContentView.swift */,
 				9C5B20AF2543FA480016A1F9 /* Assets.xcassets */,
+				9C5B20BF254401620016A1F9 /* Array+String.swift */,
 				9C5B20B42543FA480016A1F9 /* Info.plist */,
 				9C5B20B12543FA480016A1F9 /* Preview Content */,
+				9C5B20BB2543FC100016A1F9 /* Model.swift */,
+				9C5B20C3254401F70016A1F9 /* ViewModel.swift */,
 			);
 			path = "card-matcher";
 			sourceTree = "<group>";
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5B20C4254401F70016A1F9 /* ViewModel.swift in Sources */,
+				9C5B20C0254401620016A1F9 /* Array+String.swift in Sources */,
+				9C5B20BC2543FC100016A1F9 /* Model.swift in Sources */,
 				9C5B20AE2543FA480016A1F9 /* ContentView.swift in Sources */,
-				9C5B20AC2543FA480016A1F9 /* card_matcherApp.swift in Sources */,
+				9C5B20AC2543FA480016A1F9 /* CardMatcherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
