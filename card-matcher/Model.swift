@@ -80,7 +80,7 @@ struct CardMatcherModel {
             cardIndicesToClose = nil
         }
     }
-
+    
     struct Card: Identifiable {
         var id: Int
         var content: String

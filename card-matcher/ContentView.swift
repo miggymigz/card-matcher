@@ -11,13 +11,16 @@ struct ContentView: View {
     @ObservedObject var vm = CardMatcherVM()
     
     var body: some View {
-        Grid(rows: vm.rows, cols: vm.cols) { i in
-            CardView(card: vm.card(at: i))
-                .onTapGesture {
-                    vm.choose(at: i)
-                }
+        ZStack {
+            Color.yellow.ignoresSafeArea()
+            Grid(rows: vm.rows, cols: vm.cols) { i in
+                CardView(card: vm.card(at: i))
+                    .onTapGesture {
+                        vm.choose(at: i)
+                    }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
@@ -45,13 +48,19 @@ struct CardView: View {
     var body: some View {
         ZStack {
             if card.isFaceUp || card.isMatched {
-                RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3)
-                Text(card.content).font(.largeTitle)
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.white)
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(lineWidth: 3)
+                    .foregroundColor(.gray)
+                Text(card.content)
             } else {
                 RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.gray)
+                Text("◬").foregroundColor(.black)
             }
         }
-        .foregroundColor(.blue)
+        .font(.largeTitle)
     }
 }
 
