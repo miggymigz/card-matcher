@@ -14,6 +14,7 @@
 		9C5B20BC2543FC100016A1F9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B20BB2543FC100016A1F9 /* Model.swift */; };
 		9C5B20C0254401620016A1F9 /* Array+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B20BF254401620016A1F9 /* Array+String.swift */; };
 		9C5B20C4254401F70016A1F9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B20C3254401F70016A1F9 /* ViewModel.swift */; };
+		9CFC753E25442EB80024C98A /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFC753D25442EB80024C98A /* Array+Only.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9C5B20BB2543FC100016A1F9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9C5B20BF254401620016A1F9 /* Array+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+String.swift"; sourceTree = "<group>"; };
 		9C5B20C3254401F70016A1F9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9CFC753D25442EB80024C98A /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9C5B20B12543FA480016A1F9 /* Preview Content */,
 				9C5B20BB2543FC100016A1F9 /* Model.swift */,
 				9C5B20C3254401F70016A1F9 /* ViewModel.swift */,
+				9CFC753D25442EB80024C98A /* Array+Only.swift */,
 			);
 			path = "card-matcher";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				9C5B20C4254401F70016A1F9 /* ViewModel.swift in Sources */,
 				9C5B20C0254401620016A1F9 /* Array+String.swift in Sources */,
 				9C5B20BC2543FC100016A1F9 /* Model.swift in Sources */,
+				9CFC753E25442EB80024C98A /* Array+Only.swift in Sources */,
 				9C5B20AE2543FA480016A1F9 /* ContentView.swift in Sources */,
 				9C5B20AC2543FA480016A1F9 /* CardMatcherApp.swift in Sources */,
 			);

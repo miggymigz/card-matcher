@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    let vm = CardMatcherVM()
+    @ObservedObject var vm = CardMatcherVM()
     
     var body: some View {
         VStack {
             ForEach(0..<vm.rows) { r in
                 HStack {
                     ForEach(0..<vm.cols) { c in
-                        CardView(content: vm.card(at: r * vm.cols + c).content)
+                        CardView(card: vm.card(at: r * vm.cols + c))
+                            .onTapGesture {
+                                vm.choose(at: r * vm.cols + c)
+                            }
                     }
                 }
             }
@@ -25,13 +28,16 @@ struct ContentView: View {
 }
 
 struct CardView: View {
-    let content: String
+    let card: CardMatcherModel.Card
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3)
-            Text(content).font(.largeTitle)
-
+            if card.isFaceUp || card.isMatched {
+                RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3)
+                Text(card.content).font(.largeTitle)
+            } else {
+                RoundedRectangle(cornerRadius: 10)
+            }
         }
         .foregroundColor(.blue)
     }
