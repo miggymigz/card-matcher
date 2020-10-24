@@ -11,19 +11,31 @@ struct ContentView: View {
     @ObservedObject var vm = CardMatcherVM()
     
     var body: some View {
+        Grid(rows: vm.rows, cols: vm.cols) { i in
+            CardView(card: vm.card(at: i))
+                .onTapGesture {
+                    vm.choose(at: i)
+                }
+        }
+        .padding()
+    }
+}
+
+struct Grid<ItemView>: View where ItemView: View {
+    let rows: Int
+    let cols: Int
+    let builder: (Int) -> ItemView
+    
+    var body: some View {
         VStack {
-            ForEach(0..<vm.rows) { r in
+            ForEach(0..<rows) { r in
                 HStack {
-                    ForEach(0..<vm.cols) { c in
-                        CardView(card: vm.card(at: r * vm.cols + c))
-                            .onTapGesture {
-                                vm.choose(at: r * vm.cols + c)
-                            }
+                    ForEach(0..<cols) { c in
+                        builder(r * cols + c)
                     }
                 }
             }
         }
-        .padding()
     }
 }
 
